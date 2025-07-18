@@ -1,0 +1,94 @@
+ATM Management System (C++ Console App)
+This is a console-based ATM simulation written in C++. It provides a simple yet functional banking experience, handling common operations like deposits, withdrawals, transfers, and transaction history. It also includes user account management and login security.
+
+Project Architecture
+Class Structure Overview:
+
+pgsql
+Copy
+Edit
+ATMInterface (Handles menus and user interaction)
+   ↓
+ATM (Manages accounts and sessions)
+   ↓
+Account (Holds user info and transactions)
+   ↓
+Transaction (Stores individual transaction details)
+
+
+ Key Features
+Transaction
+Stores details like:
+
+Type (Deposit, Withdrawal)
+
+Amount
+
+Date & Time
+
+Balance after transaction
+
+
+
+ Account
+Each account includes:
+
+Account number, PIN, holder name
+
+Balance
+
+List of past transactions
+
+Recent activities
+
+Pending notifications
+
+Core Functions:
+
+Record transactions
+
+Show recent actions
+
+Show notifications
+
+View and sort transaction history
+
+
+
+ ATM
+Manages all user accounts
+
+Tracks login attempts
+
+Controls active session
+
+Allows account creation, login, and secure actions
+
+
+ ATMInterface
+Displays menus and handles user inputs
+
+Guides the user through all available actions
+
+
+ Security & Validation
+PIN-based login (4-digit)
+
+Locks account after 3 failed attempts
+
+Validates amount, PIN format, and account number
+
+
+Memory Management
+Accounts are created using dynamic memory
+
+Proper cleanup using destructors
+
+
+How It Works
+Main Menu: Create Account | Login | Admin | Exit
+
+Account Menu: View Balance | Deposit | Withdraw | Transfer | History | Logout
+
+Transactions: Automatically recorded with timestamp and updated balance
+
